@@ -25,13 +25,7 @@ int purchaseAlcohol() {
     printf("> ");
     gets(&name);
 
-    if (is_over_18 == FALSE) {
-        printf("Welcome, %s!\n", name);
-        printf("You are not over 18, I can not sell you alcohol\n");
-        printf("Now go away, or I will taunt you a second time.\n");
-        return EXIT_SUCCESS;
-    } else {
-        // Check the canary
+    if (is_over_18 == TRUE) {
         if (is_id_real != 0xDEADBEEF) {
             printf("Your id is fake!\n");
             return EXIT_FAILURE;
@@ -41,5 +35,10 @@ int purchaseAlcohol() {
             printFlag();
             return EXIT_SUCCESS;
         }
+    } else {
+        printf("Welcome, %s!\n", name);
+        printf("You are not over 18, I can not sell you alcohol\n");
+        printf("Now go away, or I will taunt you a second time.\n");
+        return EXIT_SUCCESS;
     }
 }
