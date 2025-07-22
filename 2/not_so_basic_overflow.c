@@ -25,10 +25,10 @@ int printName() {
     printf("Welcome, %s!\n", name);
 
     if (secret == 0xbeef) {
-        printf("You are in this program, but we do not grant you the rank of Admin.\n");
-    } else {
         printf("With great power comes great responsibility...\n");
         printFlag();
+    } else {
+        printf("You are in this program, but we do not grant you the rank of Admin.\n");
     }
     return EXIT_SUCCESS;
 }
