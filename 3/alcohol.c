@@ -38,7 +38,7 @@ int purchaseAlcohol() {
     } else {
         printf("Welcome, %s!\n", name);
         printf("You are not over 18, I can not sell you alcohol\n");
-        printf("Now go away, or I will taunt you a second time.\n");
+        printf("Here is some orange juice\n");
         return EXIT_SUCCESS;
     }
 }
