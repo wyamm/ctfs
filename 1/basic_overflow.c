@@ -23,13 +23,11 @@ int printName() {
     printf("What is your name?\n");
     printf("> ");
     gets(&name);
+    printf("Welcome, %s!\n", name);
 
     if (isAdmin == FALSE) {
-        printf("Welcome, %s!\n", name);
         printf("You are in this program, but we do not grant you the rank of Admin.\n");
-        printf("Now go away, or I will taunt you a second time.\n");
     } else {
-        printf("Welcome, %s!\n", name);
         printf("With great power comes great responsibility...\n");
         printFlag();
     }

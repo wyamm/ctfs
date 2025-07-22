@@ -8,16 +8,16 @@ COMPILE_FLAGS = -g -O0 -fno-stack-protector -no-pie # -m32
 	# -no-pie: disable position independent execution - disables relative paths for addresses
 	# -m32: compile as a 32 bit program
 
-all: 5_rce
-apple: 5_rce_apple
+all: 6_real_test
+apple: 6_real_test_apple
 
 
-5_rce:
-	${CC} ${COMPILE_FLAGS} -m32 -o ./challenge rce.c
+6_real_test:
+	${CC} ${COMPILE_FLAGS} -m32 -o ./challenge real_test.c
 
 
-5_rce_apple:
-	${CC} ${COMPILE_FLAGS} -o ./challenge rce.c
+6_real_test_apple:
+	${CC} ${COMPILE_FLAGS} -o ./challenge real_test.c
 
 clean:
 	rm -rf ./challenge ./challenge.dSYM

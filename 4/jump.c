@@ -34,7 +34,7 @@ int printName() {
 
 int win() {
     // There is no way to get to this function.
-    printf("You look like an admin, here is your flag!\n");
+    printf("Hmm actually on second thought, you look like an admin, here is your flag!\n");
     printFlag();
 
     return EXIT_SUCCESS;
