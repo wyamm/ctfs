@@ -8,16 +8,16 @@ COMPILE_FLAGS = -g -O0 -fno-stack-protector -no-pie # -m32
 	# -no-pie: disable position independent execution - disables relative paths for addresses
 	# -m32: compile as a 32 bit program
 
-all: 1_on_the_globe
-apple: on_the_globe_apple
+all: 1_whats_the_pass_word
+apple: 1_whats_the_pass_word_apple
 
 
-1_on_the_globe:
-	${CC} ${COMPILE_FLAGS} -m32 -o ./on_the_globe on_the_globe.c
+1_whats_the_pass_word:
+	${CC} ${COMPILE_FLAGS} -m32 -o ./whats_the_pass_word whats_the_pass_word.c
 
 
-1_on_the_globe_apple:
-	${CC} ${COMPILE_FLAGS} -o ./on_the_globe on_the_globe.c
+1_whats_the_pass_word_apple:
+	${CC} ${COMPILE_FLAGS} -o ./whats_the_pass_word whats_the_pass_word.c
 
 clean:
-	rm -rf ./on_the_globe ./on_the_globe.dSYM
+	rm -rf ./whats_the_pass_word ./whats_the_pass_word.dSYM
